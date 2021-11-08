@@ -7,7 +7,15 @@ public class BuildingManager : MonoBehaviour
 
     private void Update()
     {
-        var mousePos      = Mouse.current.position.ReadValue();
-        var mouseWorldPos = _camera.ScreenToWorldPoint(mousePos);
+        GetMouseWorldPos();
+    }
+
+    private Vector3 GetMouseWorldPos()
+    {
+        Vector2 mousePos      = Mouse.current.position.ReadValue();
+        Vector3 mouseWorldPos = _camera.ScreenToWorldPoint(mousePos);
+        mouseWorldPos.z = 0f; // because camera.pos.z = -10.
+
+        return mouseWorldPos;
     }
 }
