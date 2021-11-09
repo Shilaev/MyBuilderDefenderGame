@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -546, y: -367}
+  m_AnchoredPosition: {x: -195, y: 12}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126302386
@@ -584,7 +584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -388, y: -372}
+  m_AnchoredPosition: {x: -37, y: 7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &793604600
@@ -733,7 +733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -695, y: -367}
+  m_AnchoredPosition: {x: -344, y: 12}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1335390094
@@ -818,7 +818,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 519420031}
-  _objectToSpawn: {fileID: 366894863}
+  _goldenHarvester: {fileID: 3000795551594385665, guid: ec7da48ef5a7f5448ba84eda37dba8d1, type: 3}
+  _woodHarvester: {fileID: 3298938346381692132, guid: b6874aac1aa378448ba11d40d47602c7, type: 3}
+  _stoneHarvester: {fileID: 7140832893331159824, guid: 6ce1ac0bf12812f479f5d06d5bbf2e64, type: 3}
+  _uiEventSystem: {fileID: 1309822019}
+  _uiCanvas: {fileID: 1700606557}
 --- !u!1 &1700606554
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +835,6 @@ GameObject:
   - component: {fileID: 1700606557}
   - component: {fileID: 1700606556}
   - component: {fileID: 1700606555}
-  - component: {fileID: 1700606559}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -922,19 +925,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1700606559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700606554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e62471c1dad7914f9cb8973c2c167ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _uiCanvas: {fileID: 1700606554}
 --- !u!1 &1897128100
 GameObject:
   m_ObjectHideFlags: 0
