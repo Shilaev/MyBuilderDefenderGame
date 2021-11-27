@@ -1,18 +1,16 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour
 {
-    [SerializeField] private Camera     _camera;
-    [SerializeField] private GameObject _goldenHarvester;
-    [SerializeField] private GameObject _woodHarvester;
-    [SerializeField] private GameObject _stoneHarvester;
+    [SerializeField] private Camera         _camera;
+    [SerializeField] private GameObject     _goldenHarvester;
+    [SerializeField] private GameObject     _woodHarvester;
+    [SerializeField] private GameObject     _stoneHarvester;
+    [SerializeField] private BuildingTypeSO _wooden;
 
     // Input
     private MainInputActions _input;
@@ -45,7 +43,10 @@ public class BuildingManager : MonoBehaviour
     }
     #endregion
 
-    private void SpawnBuilding(InputAction.CallbackContext context) { }
+    private void SpawnBuilding(InputAction.CallbackContext context)
+    {
+        Instantiate(_wooden.prefab, GetMouseWorldPos(), Quaternion.identity);
+    }
 
     private GameObject GetBuildingsType()
     {
