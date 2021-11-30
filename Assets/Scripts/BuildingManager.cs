@@ -20,7 +20,7 @@ public class BuildingManager : MonoBehaviour
 
     private void Update()
     {
-        // Chose building to spawn
+        // Choose building to spawn
         if (Keyboard.current.digit1Key.wasReleasedThisFrame)
             _buildingType = _buildingTypeList.list[0];
         else if (Keyboard.current.digit2Key.wasReleasedThisFrame)
