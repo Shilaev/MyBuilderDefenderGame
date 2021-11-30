@@ -27,6 +27,8 @@ public class BuildingManager : MonoBehaviour
             _buildingType = _buildingTypeList.list[1];
         else if (Keyboard.current.digit3Key.wasReleasedThisFrame)
             _buildingType = _buildingTypeList.list[2];
+        else if (Keyboard.current.digit4Key.wasReleasedThisFrame)
+            _buildingType = _buildingTypeList.list[3];
 
         // spawn
         if (Mouse.current.leftButton.wasReleasedThisFrame)
