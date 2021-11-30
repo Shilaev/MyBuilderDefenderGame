@@ -22,18 +22,16 @@ public class BuildingManager : MonoBehaviour
     {
         // Chose building to spawn
         if (Keyboard.current.digit1Key.wasReleasedThisFrame)
-        {
             _buildingType = _buildingTypeList.list[0];
-        }
         else if (Keyboard.current.digit2Key.wasReleasedThisFrame)
-        {
             _buildingType = _buildingTypeList.list[1];
-        }
+        else if (Keyboard.current.digit3Key.wasReleasedThisFrame)
+            _buildingType = _buildingTypeList.list[2];
 
         // spawn
         if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
-            var instB = Instantiate(_buildingType.prefab, GetMouseWorldPosition(), Quaternion.identity);
+            Transform instB = Instantiate(_buildingType.prefab, GetMouseWorldPosition(), Quaternion.identity);
         }
     }
 
