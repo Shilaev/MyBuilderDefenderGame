@@ -8,19 +8,17 @@ public class ResourcesUI : MonoBehaviour
 {
     private ResourceTypeListSO _resourceTypes;
     private Dictionary<ResourceTypeSO, Transform> _resourceTypeTransformDictionary;
+    [SerializeField] private Transform _resourceTemplate;
     private void Awake()
     {
         _resourceTypes = Resources.Load<ResourceTypeListSO>("MainResources");
 
         _resourceTypeTransformDictionary = new Dictionary<ResourceTypeSO, Transform>();
 
-        Transform resourceTemplate = transform.Find("ResourceTemplate");
-        resourceTemplate.gameObject.SetActive(false);
-
         int index = 0;
         foreach (var resource in _resourceTypes.list)
         {
-            Transform resourceTransform = Instantiate(resourceTemplate, transform);
+            Transform resourceTransform = Instantiate(_resourceTemplate, transform);
             resourceTransform.gameObject.SetActive(true);
 
             float offsetAmount = -130f;
@@ -55,3 +53,4 @@ public class ResourcesUI : MonoBehaviour
         }
     }
 }
+    
