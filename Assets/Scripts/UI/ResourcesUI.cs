@@ -15,9 +15,6 @@ public class ResourcesUI : MonoBehaviour
 
         _resourceTypeTransformDictionary = new Dictionary<ResourceTypeSO, Transform>();
 
-        // _resourceTemplate = transform.Find("ResourceTemplate");
-        // _resourceTemplate.gameObject.SetActive(false);
-
         int index = 0;
         foreach (var resource in _resourceTypes.list)
         {
