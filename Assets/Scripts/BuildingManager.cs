@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,12 +7,15 @@ public class BuildingManager : MonoBehaviour
     private BuildingTypeListSO _buildingTypeList;
     private BuildingTypeSO _buildingType;
 
-
     private void Awake()
     {
-        _camera = Camera.main;
         _buildingTypeList = Resources.Load<BuildingTypeListSO>("MainBuildings");
         _buildingType = _buildingTypeList.list[0];
+    }
+
+    private void Start()
+    {
+        _camera = Camera.main;
     }
 
     private void Update()

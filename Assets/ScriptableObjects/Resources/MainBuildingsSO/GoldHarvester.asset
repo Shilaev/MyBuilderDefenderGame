@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea13f84b22fd4b27815b5838facc0446, type: 3}
   m_Name: GoldHarvester
   m_EditorClassIdentifier: 
-  buildingName: WoodHarvester
+  buildingName: GoldHarvester
   prefab: {fileID: 1863619277360072028, guid: 7dc4e58b3bc7f03478b9a2f5d10c8f2d, type: 3}
+  ResourceGeneratorData:
+    timeMax: 0.5
+    resourceType: {fileID: 11400000, guid: 888ddfa99e73308448886cb399cd9a9b, type: 2}

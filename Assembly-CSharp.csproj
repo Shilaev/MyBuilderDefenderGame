@@ -56,11 +56,14 @@
     <Compile Include="Assets\Scripts\UIManager_forTest.cs" />
     <Compile Include="Assets\BuilderDefenderAssets\Scripts\GradientHolder.cs" />
     <Compile Include="Assets\Scripts\BuildingManager.cs" />
-    <Compile Include="Assets\Scripts\BuildingTypeSO.cs" />
-    <Compile Include="Assets\Scripts\BuildingTypeListSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeListSO.cs" />
     <Compile Include="Assets\Scripts\ResourceManager.cs" />
-    <Compile Include="Assets\Scripts\ResourceTypeSO.cs" />
-    <Compile Include="Assets\Scripts\ResourceTypeListSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeListSO.cs" />
+    <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceGeneratorData.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
