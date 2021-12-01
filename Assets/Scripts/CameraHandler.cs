@@ -21,12 +21,12 @@ public class CameraHandler : MonoBehaviour
 
     private void Update()
     {
-        float xAxis = Input.GetAxisRaw("Horizontal");
-        float yAxis = Input.GetAxisRaw("Vertical");
+        HandleMovement();
+        HandleZoom();
+    }
 
-        Vector3 moveDirection = new Vector2(xAxis, yAxis);
-        transform.position += moveDirection * _moveSpeed * Time.deltaTime;
-
+    private void HandleZoom()
+    {
         _targetOrthographicSize -= Input.mouseScrollDelta.y;
         _targetOrthographicSize = math.clamp(_targetOrthographicSize, _minZoom, _maxZoom);
 
@@ -34,5 +34,14 @@ public class CameraHandler : MonoBehaviour
         _orthographicSize = math.lerp(_orthographicSize, _targetOrthographicSize, Time.deltaTime * _zoomSpeed);
 
         _cinemachineVirtualCamera.m_Lens.OrthographicSize = _orthographicSize;
+    }
+
+    private void HandleMovement()
+    {
+        float xAxis = Input.GetAxisRaw("Horizontal");
+        float yAxis = Input.GetAxisRaw("Vertical");
+
+        Vector3 moveDirection = new Vector2(xAxis, yAxis);
+        transform.position += moveDirection * _moveSpeed * Time.deltaTime;
     }
 }
