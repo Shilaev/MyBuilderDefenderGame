@@ -636,7 +636,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -871,6 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b9ca6307d324646a970321486aff78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cinemachineVirtualCamera: {fileID: 1964647847}
   _moveSpeed: 15
 --- !u!1 &1237055429
 GameObject:
@@ -1034,7 +1035,7 @@ GameObject:
   - component: {fileID: 1964647846}
   - component: {fileID: 1964647847}
   m_Layer: 0
-  m_Name: CM_CameraSettings
+  m_Name: CM_VirtualCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1077,7 +1078,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1232863247}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 12
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
