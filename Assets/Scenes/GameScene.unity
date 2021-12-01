@@ -636,7 +636,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12
+  orthographic size: 9.799999
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -873,6 +873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cinemachineVirtualCamera: {fileID: 1964647847}
   _moveSpeed: 15
+  _zoomAmount: 0.8
 --- !u!1 &1237055429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1079,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1232863247}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 12
+    OrthographicSize: 9.799999
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
