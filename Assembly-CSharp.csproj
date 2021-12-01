@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{C69E3DD9-C8FE-B340-D2AA-B50015AE5FB5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -57,18 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\UIManager_forTest.cs" />
-    <Compile Include="Assets\BuilderDefenderAssets\Scripts\GradientHolder.cs" />
-    <Compile Include="Assets\Scripts\BuildingManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeSO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeListSO.cs" />
-    <Compile Include="Assets\Scripts\ResourceManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeSO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeListSO.cs" />
     <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeListSO.cs" />
+    <Compile Include="Assets\Scripts\UIManager_forTest.cs" />
+    <Compile Include="Assets\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceGeneratorData.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeHolder.cs" />
+    <Compile Include="Assets\BuilderDefenderAssets\Scripts\GradientHolder.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeListSO.cs" />
     <Compile Include="Assets\Scripts\UI\ResourcesUI.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeSO.cs" />
+    <Compile Include="Assets\Scripts\BuildingManager.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
