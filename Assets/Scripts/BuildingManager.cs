@@ -1,16 +1,24 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class BuildingManager : MonoBehaviour
 {
+    public static BuildingManager Instance { get; private set; }
     private Camera _camera;
-    private BuildingTypeListSO _buildingTypeList;
-    private BuildingTypeSO _buildingType;
+    private BuildingTypeListSO _buildingTypes;
+    private BuildingTypeSO _activeBuildingType;
+
+    public void SetActiveBuildingType(BuildingTypeSO buildingType)
+    {
+        _activeBuildingType = buildingType;
+    }
 
     private void Awake()
     {
-        _buildingTypeList = Resources.Load<BuildingTypeListSO>("MainBuildings");
-        _buildingType = _buildingTypeList.list[0];
+        Instance = this;
+        _buildingTypes = Resources.Load<BuildingTypeListSO>("MainBuildings");
+        _activeBuildingType = _buildingTypes.list[0];
     }
 
     private void Start()
@@ -20,20 +28,18 @@ public class BuildingManager : MonoBehaviour
 
     private void Update()
     {
-        // Choose building to spawn
+        // Choose building to spawn with keyboard
         if (Keyboard.current.digit1Key.wasReleasedThisFrame)
-            _buildingType = _buildingTypeList.list[0];
+            _activeBuildingType = _buildingTypes.list[0];
         else if (Keyboard.current.digit2Key.wasReleasedThisFrame)
-            _buildingType = _buildingTypeList.list[1];
+            _activeBuildingType = _buildingTypes.list[1];
         else if (Keyboard.current.digit3Key.wasReleasedThisFrame)
-            _buildingType = _buildingTypeList.list[2];
-        else if (Keyboard.current.digit4Key.wasReleasedThisFrame)
-            _buildingType = _buildingTypeList.list[3];
+            _activeBuildingType = _buildingTypes.list[2];
 
         // spawn
-        if (Mouse.current.leftButton.wasReleasedThisFrame)
+        if (Mouse.current.leftButton.wasReleasedThisFrame && !EventSystem.current.IsPointerOverGameObject())
         {
-            Transform instB = Instantiate(_buildingType.prefab, GetMouseWorldPosition(), Quaternion.identity);
+            Transform instB = Instantiate(_activeBuildingType.prefab, GetMouseWorldPosition(), Quaternion.identity);
         }
     }
 
