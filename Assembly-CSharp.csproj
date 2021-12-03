@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,16 +53,13 @@
     <UnityVersion>2021.1.6f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
     <Compile Include="Assets\Scripts\BuildingTypeSelectUIGenerator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeListSO.cs" />
     <Compile Include="Assets\Scripts\UIManager_forTest.cs" />
     <Compile Include="Assets\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceGeneratorData.cs" />
-    <Compile Include="Assets\BuilderDefenderAssets\Scripts\GradientHolder.cs" />
+    <Compile Include="Assets\_\Scripts\GradientHolder.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeSO.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeListSO.cs" />
