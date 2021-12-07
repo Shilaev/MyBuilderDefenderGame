@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ public class BuildingTypeSelectUIGenerator : MonoBehaviour
 {
     [SerializeField] private Transform _btnTemplate;
     private BuildingTypeListSO _buildingTypes;
+    private Dictionary<BuildingTypeSO, Transform> _btnTransform;
 
     private void Awake()
     {
