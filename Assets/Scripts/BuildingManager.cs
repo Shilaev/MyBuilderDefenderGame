@@ -32,16 +32,7 @@ public class BuildingManager : MonoBehaviour
 
     private void Update()
     {
-        // Choose building to spawn with keyboard
-        if (Keyboard.current.digit1Key.wasReleasedThisFrame)
-            _activeBuildingType = _buildingTypes.list[0];
-        else if (Keyboard.current.digit2Key.wasReleasedThisFrame)
-            _activeBuildingType = _buildingTypes.list[1];
-        else if (Keyboard.current.digit3Key.wasReleasedThisFrame)
-            _activeBuildingType = _buildingTypes.list[2];
-
         HandlePositionBuildingGhost();
-
         // spawn
         if (Mouse.current.leftButton.wasReleasedThisFrame && !EventSystem.current.IsPointerOverGameObject() && _activeBuildingType != null)
         {
