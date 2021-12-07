@@ -1,16 +1,28 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class BuildingManager : MonoBehaviour
 {
+    public static BuildingManager Instance { get; private set; }
     private Camera _camera;
-    private BuildingTypeListSO _buildingTypeList;
-    private BuildingTypeSO _buildingType;
+    private BuildingTypeListSO _buildingTypes;
+    private BuildingTypeSO _activeBuildingType;
+    private Transform _buildingGhost;
+
+    public void SetActiveBuildingType(BuildingTypeSO buildingType)
+    {
+        _activeBuildingType = buildingType;
+        _buildingGhost = GenerateBuildingGhost(buildingType);
+    }
 
     private void Awake()
     {
-        _buildingTypeList = Resources.Load<BuildingTypeListSO>("MainBuildings");
-        _buildingType = _buildingTypeList.list[0];
+        Instance = this;
+        _buildingTypes = Resources.Load<BuildingTypeListSO>("MainBuildings");
+        _activeBuildingType = null;
     }
 
     private void Start()
@@ -20,20 +32,14 @@ public class BuildingManager : MonoBehaviour
 
     private void Update()
     {
-        // Choose building to spawn
-        if (Keyboard.current.digit1Key.wasReleasedThisFrame)
-            _buildingType = _buildingTypeList.list[0];
-        else if (Keyboard.current.digit2Key.wasReleasedThisFrame)
-            _buildingType = _buildingTypeList.list[1];
-        else if (Keyboard.current.digit3Key.wasReleasedThisFrame)
-            _buildingType = _buildingTypeList.list[2];
-        else if (Keyboard.current.digit4Key.wasReleasedThisFrame)
-            _buildingType = _buildingTypeList.list[3];
-
+        HandlePositionBuildingGhost();
         // spawn
-        if (Mouse.current.leftButton.wasReleasedThisFrame)
+        if (Mouse.current.leftButton.wasReleasedThisFrame && !EventSystem.current.IsPointerOverGameObject() && _activeBuildingType != null)
         {
-            Transform instB = Instantiate(_buildingType.prefab, GetMouseWorldPosition(), Quaternion.identity);
+            Transform newBuilding = Instantiate(_activeBuildingType.prefab, GetMouseWorldPosition(), Quaternion.identity);
+            _activeBuildingType = null;
+            _buildingGhost.AddComponent<DestroyMeAfterTime>();
+            _buildingGhost = null;
         }
     }
 
@@ -43,4 +49,28 @@ public class BuildingManager : MonoBehaviour
         _mousePosition_World.z = 0f;
         return _mousePosition_World;
     }
+
+    private Transform GenerateBuildingGhost(BuildingTypeSO buildingType)
+    {
+        // position
+        Transform newBuildingGhost = Instantiate(buildingType.prefab, GetMouseWorldPosition(), Quaternion.identity);
+
+        // color
+        var color = newBuildingGhost.GetChild(0).GetComponent<SpriteRenderer>().color;
+        var newColor = color;
+        newColor.a = 0.5f;
+        newBuildingGhost.GetChild(0).GetComponent<SpriteRenderer>().color = newColor;
+
+        return newBuildingGhost;
+    }
+
+    private void HandlePositionBuildingGhost()
+    {
+        if (_buildingGhost != null)
+        {
+            _buildingGhost.transform.position = GetMouseWorldPosition();
+        }
+    }
+
+
 }

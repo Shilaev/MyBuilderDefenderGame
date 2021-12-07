@@ -54,19 +54,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
+    <Compile Include="Assets\Scripts\BuildingTypeSelectUIGenerator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeListSO.cs" />
     <Compile Include="Assets\Scripts\UIManager_forTest.cs" />
     <Compile Include="Assets\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceGeneratorData.cs" />
-    <Compile Include="Assets\BuilderDefenderAssets\Scripts\GradientHolder.cs" />
+    <Compile Include="Assets\_\Scripts\GradientHolder.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\ResourceTypeSO.cs" />
+    <Compile Include="Assets\Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeListSO.cs" />
     <Compile Include="Assets\Scripts\UI\ResourcesUI.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeSO.cs" />
     <Compile Include="Assets\Scripts\BuildingManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeHolder.cs" />
-    <Compile Include="Assets\Scripts\CameraHandler.cs" />
-    <Compile Include="Assets\Scripts\BuildingTypeSelectUIGenerator.cs" />
+    <Compile Include="Assets\Scripts\DestroyMeAfterTime.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -767,6 +768,12 @@
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
@@ -808,12 +815,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
