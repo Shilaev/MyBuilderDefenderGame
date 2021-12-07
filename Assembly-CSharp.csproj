@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\BuildingManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectScripts\BuildingTypeHolder.cs" />
     <Compile Include="Assets\Scripts\DestroyMeAfterTime.cs" />
+    <Compile Include="Assets\Scripts\SpritePositionSortingOrder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

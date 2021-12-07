@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 4602916987715219565}
   - component: {fileID: 4602916987715219569}
   m_Layer: 5
-  m_Name: btnBuildingTypeSelectUITemplate
+  m_Name: pfBtnBuildingTypeSelectUITemplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
