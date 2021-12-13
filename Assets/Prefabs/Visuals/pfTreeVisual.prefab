@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runOnce: 1
-  _positionOffsetY: -3
+  _positionOffsetY: -3.1
 --- !u!1 &766746179961913856
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runOnce: 1
-  _positionOffsetY: -2
+  _positionOffsetY: -1.9
 --- !u!1 &6935567414290222296
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runOnce: 1
-  _positionOffsetY: -4
+  _positionOffsetY: -3.2
 --- !u!1 &7260127690804197385
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runOnce: 1
-  _positionOffsetY: 0
+  _positionOffsetY: 1
 --- !u!1 &8976734756563553963
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,4 +524,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runOnce: 1
-  _positionOffsetY: -1
+  _positionOffsetY: -2
