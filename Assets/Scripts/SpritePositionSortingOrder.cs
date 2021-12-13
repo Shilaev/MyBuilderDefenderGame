@@ -4,6 +4,7 @@ using UnityEngine;
 public class SpritePositionSortingOrder : MonoBehaviour
 {
     [SerializeField] private bool _runOnce = true;
+    [SerializeField] private float _positionOffsetY;
     private SpriteRenderer _spriteRenderer;
 
     private void Awake()
@@ -13,7 +14,7 @@ public class SpritePositionSortingOrder : MonoBehaviour
 
     private void LateUpdate()
     {
-        _spriteRenderer.sortingOrder = Convert.ToInt32(-transform.position.y * 10);
+        _spriteRenderer.sortingOrder = Convert.ToInt32(-(transform.position.y + _positionOffsetY) * 10);
 
         // destroy after run once
         // you can chose this option in inspector
